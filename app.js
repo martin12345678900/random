@@ -16,19 +16,19 @@ function solve() {
         let openSectionDiv = openSection.querySelectorAll('div')[1];
         let startButton = createElements('button', 'green', 'Start', {type: 'click', function: addToInProgressSection});
         let deleteButton = createElements('button' , 'red', 'Delete', {type: 'click', function: deleteTheArticle});
-        let div = createElements('div', 'flex', null, null);
+        let buttonsDiv = createElements('div', 'flex', null, null);
         let dueDate = createElements('p', null, `Due Date: ${dateField.value}`, null);
         let description = createElements('p', null, `Description: ${descriptionField.value}`, null);
         let task = createElements('h3', null, taskField.value, null);
-        let article = createElements('article', null, null, null);
+        let articleInformation = createElements('article', null, null, null);
 
         openSectionDiv.appendChild(article);
-        div.appendChild(startButton);
-        div.appendChild(deleteButton);
-        article.appendChild(task);
-        article.appendChild(description);
-        article.appendChild(dueDate);
-        article.appendChild(div);
+        buttonsDiv.appendChild(startButton);
+        buttonsDiv.appendChild(deleteButton);
+        articleInformation.appendChild(task);
+        articleInformation.appendChild(description);
+        articleInformation.appendChild(dueDate);
+        articleInformation.appendChild(div);
 
         taskField.value = '';
         descriptionField.value = '';
